@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('아이디') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -71,20 +71,3 @@
     </div>
 </div>
 @endsection
-
-<div class="form-group row">
-    <label for="user_id" class="col-md-4-form-label text-me-right">{{ __('아이디') }}</label>
-    <div class="col-md-6">
-        <input type="text" id="user_id" class="form-control @error('user_id') is-invalid @enderror"
-        name="user_id" value="{{ lod('user_id') }}" required autocomplete="user_id" autofocus>
-
-        @error('user_id')
-        <span class="invalid-feedback" role="alert">
-            <strong>{{ $message }}</strong>
-
-        </span>
-            
-        @enderror
-
-    </div>
-</div>
