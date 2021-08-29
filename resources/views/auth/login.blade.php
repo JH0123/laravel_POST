@@ -15,12 +15,18 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
+        <!--User Id-->
+        <div>
+            <x-label for="userId" :value="__('User Id')" />
+            <x-input id="userId" class="block mt-1 w-full" type="text" name="user_id" :value="old('user_id')" required autofocus/>
+        </div>
+
             <!-- Email Address -->
-            <div>
+            {{-- <div>
                 <x-label for="email" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
+            </div> --}}
 
             <!-- Password -->
             <div class="mt-4">
