@@ -17,13 +17,14 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name')->comment('이름');
             $table->string('user_id')->comment('아이디');
-            $table->unsignedSmallInteger('user_level')->comment('권한');
             $table->string('email')->unique()->comment('이메일');
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at')->nullable('사용자 이메일 인증');
             $table->string('password')->comment('비밀번호');
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE users COMMENT='회원정보'");
     }
 
     /**

@@ -71,7 +71,6 @@ class RegisterController extends Controller
             'user_id' => $data['user_id'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'user_level' => config('ext.user.user_level.default') //관리자와 회원 구분?
         ]);
     }
 }
