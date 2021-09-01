@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\Setting\BoardController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'as' => 'rhsfl.',
+    'as' => 'rhksfl.',
     'middleware' => ['level:admin'],
 ], function () {
     Route::get('home', [HomeController::class, 'index'])->name('home');
@@ -12,6 +13,6 @@ Route::group([
     Route::group([
         'prefix' => 'setting',
     ], function () {
-        Route::resource('goard-infos', BoardController::class);
+        Route::resource('board-infos', BoardController::class);
     });
 });
