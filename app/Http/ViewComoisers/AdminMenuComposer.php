@@ -14,7 +14,9 @@ class AdminMenuComposer
         $common = [
             [
                 'title' => 'Dashboard',
-                'url' => route('rhksfl.home', null, false),
+                //'url' => route('rhksfl.home),  //url:http://localhost/rhksfl/setting/board-infos 와 notPath: /rhksfl/setting/voard-infos와 같다
+                //위 코드는 뒤에 코드가 추가되면 같은 메뉴로 확인이 불가
+                'url' => route('rhksfl.home', null, false), //url: /rhsfl/setting/board-infos 과 notPath: /rhksfl/setting/board-infos 와 같다
             ],
         ];
 
