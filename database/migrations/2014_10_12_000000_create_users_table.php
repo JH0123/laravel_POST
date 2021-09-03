@@ -23,8 +23,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        DB::statement("ALTER TABLE users COMMENT='회원정보'");
     }
 
     /**
